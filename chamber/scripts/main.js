@@ -1,3 +1,5 @@
+
+//fetching current date and time
 document.addEventListener('DOMContentLoaded', () => {
     const membersContainer = document.getElementById('members');
     const gridViewButton = document.getElementById('grid-view');
@@ -67,3 +69,104 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial fetch
     fetchMembers();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const API_KEY = 'e2569e6bc2a3c335fd02a5aeb9c4e23b';
+    const LAT = 49.750575158619476; // Trier's latitude
+    const LON = 6.636411660826279; // Trier's longitude
+
+    const currentTempElement = document.getElementById('current-temp');
+    const weatherDescElement = document.getElementById('weather-desc');
+    const day1Element = document.getElementById('day1');
+    const day2Element = document.getElementById('day2');
+    const day3Element = document.getElementById('day3');
+
+    const getWeatherData = async () => {
+        try {
+            const response = await fetch(
+                `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&appid=${API_KEY}`
+            );
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch weather data');
+            }
+
+            const weatherData = await response.json();
+            const currentWeather = weatherData.list[0]; // Current weather info
+
+            // Display current temperature and description
+            currentTempElement.textContent = `${Math.round(currentWeather.main.temp)}°C`;
+            weatherDescElement.textContent = capitalizeWords(currentWeather.weather[0].description);
+
+            // Display the next three days' forecast
+            day1Element.textContent = formatForecast(weatherData.list[8]); // 24 hours later
+            day2Element.textContent = formatForecast(weatherData.list[16]); // 48 hours later
+            day3Element.textContent = formatForecast(weatherData.list[24]); // 72 hours later
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+            currentTempElement.textContent = 'Error';
+            weatherDescElement.textContent = 'Error';
+            day1Element.textContent = 'Error';
+            day2Element.textContent = 'Error';
+            day3Element.textContent = 'Error';
+        }
+    };
+
+    // Helper function to capitalize weather description
+    const capitalizeWords = (str) => {
+        return str
+            .split(' ')
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    };
+
+    // Helper function to format the forecast data
+    const formatForecast = (forecast) => {
+        const temp = Math.round(forecast.main.temp);
+        const description = capitalizeWords(forecast.weather[0].description);
+        return `${temp}°C, ${description}`;
+    };
+
+    // Fetch weather data
+    getWeatherData();
+});
+
+
+  // Fetch data from the external JSON file
+fetch('data/members.json')
+.then(response => response.json()) // Parse the JSON
+.then(members => {
+    // Filter for gold or silver members
+    const goldSilverMembers = members.filter(member => member.membership === "gold" || member.membership === "silver");
+
+    // Randomly select 2 or 3 members
+    const randomMembers = goldSilverMembers.sort(() => Math.random() - Math.random()).slice(0, 3);
+
+    // Generate spotlight cards
+    generateSpotlights(randomMembers);
+})
+.catch(error => {
+    console.error('Error loading member data:', error);
+});
+
+
+
+
+// Function to generate spotlight cards
+function generateSpotlights(members) {
+const container = document.getElementById('spotlights-container');
+members.forEach(member => {
+    const card = document.createElement('div');
+    card.classList.add('spotlight-card');
+
+    card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} logo">
+        <h3>${member.name}</h3>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><strong>Membership Level:</strong> ${member.membership}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+    `;
+    container.appendChild(card);
+});
+}
