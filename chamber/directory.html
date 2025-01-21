@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Papi Chamber of Commerce">
+    <meta name="description" content="Official directory of Papi's Chamber of Commerce.">
+    <meta name="author" content="Ferrin Mutuku">
+    <meta property="og:title" content="Papi Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="favicon.ico">
+    <meta property="og:url" content="https://ferinmtk.github.io/wdd231/chamber/directory.html">
+    <title>Papi Chamber of Commerce Directory</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Timbuktu Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/chamber/directory.html" class="active">Directory</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="view-toggle">
+            <h2 class="sr-only">Toggle Member View</h2>
+            <button id="grid-view" aria-label="Switch to grid view">Grid View</button>
+            <button id="list-view" aria-label="Switch to list view">List View</button>
+        </section>
+        
+        
+        <section id="members" class="grid"> 
+
+            <h2>Member Directory</h2> <!-- Added heading -->
+    <!-- Members will be dynamically populated here -->
+        </section>
+        
+    </main>
+    <footer>
+        <p>© <span id="year"></span> Papi Chamber of Commerce | WDD 231</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+</html>

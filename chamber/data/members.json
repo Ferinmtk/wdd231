@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Safari Adventures Ltd.",
+        "address": "123 Maasai Mara Road, Nairobi",
+        "phone": "+254-712-345678",
+        "website": "https://safariadventures.co.ke",
+        "image": "safari.jpg",
+        "membership": "gold"
+    },
+    {
+        "name": "Swahili Delights",
+        "address": "45 Ocean Road, Mombasa",
+        "phone": "+254-722-987654",
+        "website": "https://swahilidelights.co.ke",
+        "image": "swahili.jpg",
+        "membership": "silver"
+    },
+    {
+        "name": "Kenyan Coffee House",
+        "address": "78 Coffee Lane, Kisumu",
+        "phone": "+254-733-123456",
+        "website": "https://kenyancoffeehouse.co.ke",
+        "image": "coffee.jpg",
+        "membership": "gold"
+    },
+    {
+        "name": "Green Ventures",
+        "address": "90 Eco Street, Eldoret",
+        "phone": "+254-711-654321",
+        "website": "https://greenventures.co.ke",
+        "image": "green.jpg",
+        "membership": "silver"
+    },
+    {
+        "name": "Mount Kenya Trekkers",
+        "address": "102 Summit Avenue, Nanyuki",
+        "phone": "+254-710-987654",
+        "website": "https://mountkenyatrekkers.co.ke",
+        "image": "mountkenya.jpg",
+        "membership": "gold"
+    },
+    {
+        "name": "Urban Art Gallery",
+        "address": "56 Creative Hub, Nairobi",
+        "phone": "+254-721-234567",
+        "website": "https://urbanartgallery.co.ke",
+        "image": "art.jpg",
+        "membership": "bronze"
+    },
+    {
+        "name": "Lake Victoria Tours",
+        "address": "33 Lake Drive, Kisumu",
+        "phone": "+254-734-567890",
+        "website": "https://lakevictoriatours.co.ke",
+        "image": "lake.jpg",
+        "membership": "bronze"
+    }
+]

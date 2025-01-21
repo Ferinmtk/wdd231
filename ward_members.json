@@ -1,0 +1,89 @@
+{
+    "wardMembers": [
+      {
+        "familyName": "Mwangi",
+        "moveInDate": "2025-01-05",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "familyMembers": [
+          {
+            "name": "James Mwangi",
+            "gender": "Male",
+            "birthdate": "1982-03-12"
+          },
+          {
+            "name": "Grace Mwangi",
+            "gender": "Female",
+            "birthdate": "1985-07-08"
+          },
+          {
+            "name": "Brian Mwangi",
+            "gender": "Male",
+            "birthdate": "2010-10-22"
+          },
+          {
+            "name": "Faith Mwangi",
+            "gender": "Female",
+            "birthdate": "2013-06-15"
+          }
+        ]
+      },
+      {
+        "familyName": "Ochieng",
+        "moveInDate": "2024-11-18",
+        "numberOfPeople": 3,
+        "visitedByBishopric": false,
+        "familyMembers": [
+          {
+            "name": "Daniel Ochieng",
+            "gender": "Male",
+            "birthdate": "1978-01-25"
+          },
+          {
+            "name": "Mary Ochieng",
+            "gender": "Female",
+            "birthdate": "1980-12-10"
+          },
+          {
+            "name": "Lucy Ochieng",
+            "gender": "Female",
+            "birthdate": "2009-04-05"
+          }
+        ]
+      },
+      {
+        "familyName": "Mutiso",
+        "moveInDate": "2025-01-01",
+        "numberOfPeople": 5,
+        "visitedByBishopric": true,
+        "familyMembers": [
+          {
+            "name": "Peter Mutiso",
+            "gender": "Male",
+            "birthdate": "1980-05-15"
+          },
+          {
+            "name": "Esther Mutiso",
+            "gender": "Female",
+            "birthdate": "1983-09-20"
+          },
+          {
+            "name": "Joseph Mutiso",
+            "gender": "Male",
+            "birthdate": "2006-02-11"
+          },
+          {
+            "name": "Caroline Mutiso",
+            "gender": "Female",
+            "birthdate": "2008-07-03"
+          },
+          {
+            "name": "Andrew Mutiso",
+            "gender": "Male",
+            "birthdate": "2012-11-28"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferrin A. Mutuku - Portfolio</title>
+  <meta property="og:title" content="Ferrin A. Mutuku - Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://github.com/Ferinmtk/wdd231/blob/main/images/Hometown.jpg"> 
+  <meta property="og:url" content="https://ferinmtk.github.io/wdd231/"> 
+  <meta property="og:description" content="This is about Ferrin Mutuku, a student in WDD 231">
+  <meta name="description" content="This is about Ferrin Mutuku, a student in WDD 231">
+  <meta name="author" content="Ferrin Mutuku">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/script.js" defer></script>
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Profile picture of Ferrin" class="profile-img">
+      <h1>Ferrin A. Mutuku</h1>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="nav-menu" aria-label="Main navigation">
+      <a href="#course-work" class="nav-link active">Home</a>
+      <a href="/chamber/directory.html" class="nav-link">Chamber</a>
+      <a href="https://github.com" target="_blank" class="nav-link">GitHub Profile</a>
+      <a href="https://linkedin.com" target="_blank" class="nav-link">LinkedIn</a>
+    </nav>
+    
+  </header>
+  <main class="main-content">
+    <section id="course-work" class="course-work">
+      <h2>Course Work Overview</h2>
+      <ul>
+        <li>Course 1: Introduction to Programming</li>
+        <li>Course 2: Web Development Fundamentals</li>
+        <li>Course 3: Advanced Web Design</li>
+      </ul>
+    </section>
+    <section id="gallery" class="image-card">
+      <h2>Explore Nairobi, Kenya</h2>
+      <img src="images/wildlife.jpeg" alt="Wildlife safari in Nairobi">
+      <p>Wildlife Safari</p>
+    </section>
+    <section id="certificate" class="certificate">
+      <h2>Certification Courses</h2>
+      <div class="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cse">CSE</button>
+        <button class="filter-btn" data-filter="wdd">WDD</button>
+      </div>
+      <div class="courses">
+        <button class="course-btn" data-category="cse">CSE 110</button>
+        <button class="course-btn" data-category="wdd">WDD 130</button>
+        <button class="course-btn" data-category="cse">CSE 210</button>
+        <button class="course-btn" data-category="wdd">WDD 131</button>
+        <button class="course-btn" data-category="wdd">WDD 231</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Ferrin Mutuku, Kenya</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
