@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Papi Chamber of Commerce">
+    <meta name="description" content="Official directory of Papi's Chamber of Commerce.">
+    <meta name="author" content="Ferrin Mutuku">
+    <meta property="og:title" content="Papi Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="favicon.ico">
+    <meta property="og:url" content="https://ferinmtk.github.io/wdd231/chamber/directory.html">
+    <title>Papi Chamber of Commerce Directory</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Papi Chamber of Commerce</h1>
+    <nav>
+        <ul>
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/chamber/directory.html">Directory</a></li>
+            <li><a href="https://github.com">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/ferrin-mutuku-21305911a/">LinkedIn</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Hero Image" class="hero-image" >
+      <div class="hero-overlay">
+        <h2>Empowering Businesses, Building Community</h2>
+        <a href="#" class="cta-button">Join Now</a>
+      </div>
+    </section>
+
+
+    
+
+    <section class="events">
+      <h2>Current Events</h2>
+      <p>Stay updated with our latest events and activities.</p>
+      <ul>
+        <li>Networking Night - January 30</li>
+        <li>Annual Gala - February 20</li>
+        <li>Market Day - March 15</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Weather Forecast</h2>
+      <p>Current Temperature: <span id="current-temp">Loading...</span></p>
+      <p>Condition: <span id="weather-desc">Loading...</span></p>
+      <ul>
+        <li> <span id="day1">Loading...</span></li>
+        <li> <span id="day2">Loading...</span></li>
+        <li> <span id="day3">Loading...</span></li>
+      </ul>
+    </section>
+    <div id="spotlights-container" class="spotlights-container">
+        <!-- Spotlight cards will be dynamically inserted here -->
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Papi Chamber of Commerce | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+</footer>
+</body>
+</html>
