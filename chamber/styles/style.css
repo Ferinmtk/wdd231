@@ -323,3 +323,235 @@ footer a:hover {
         padding: 10px;
     }
 }
+
+
+/* join.html styling*/
+
+/* Form Styles */
+/* Join Page specific styles */
+.all-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+}
+
+.form-container {
+    flex: 1; /* Allows the form to take up available space */
+}
+
+.membership-levels {
+    flex: 1; /* Allows the membership cards to take up available space */
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .all-container {
+        flex-direction: column; /* Stack the form and membership cards vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .form-container, .membership-levels {
+        width: 100%; /* Make them full width */
+        margin-bottom: 20px; /* Add spacing between the form and membership cards */
+    }
+
+    .membership-levels {
+        margin-top: 20px; /* Add space between membership levels and form on smaller screens */
+    }
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Error Styles */
+form input:required:invalid,
+form textarea:required:invalid {
+    border-color: #ff4444;
+}
+
+form input:required:valid,
+form textarea:required:valid {
+    border-color: #00C851;
+}
+
+
+
+
+
+
+
+
+/* Animation for membership cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.membership-card {
+    animation: fadeIn 1s ease-in-out;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.membership-levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal:target, .modal:target + .modal-overlay {
+    display: block;
+}
+
+.close-modal {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+
+/*For the thank you.html*/ 
+
+/* for the details*/
+.details p {
+    font-size: 1.5rem; /* Increase font size for the paragraph */
+    color: #333;
+}
+
+.details ul {
+    font-size: 1.25rem; /* Increase font size for the list items */
+    color: #444;
+    list-style-type: none; /* Optional: removes default bullet points */
+    padding-left: 0;
+}
+
+.details li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* for the celebrations*/
+.celebration {
+    font-size: 5rem;
+    animation: celebrate 5s ease-in-out forwards, fadeOut 5s ease-out forwards; /* Add fadeOut animation */
+}
+
+.celebration span {
+    display: inline-block;
+    animation: bounce 5s alternate infinite;
+}
+
+.celebration span:nth-child(odd) {
+    animation-duration: 0.7s;
+}
+
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    99% {
+        opacity:0;
+    }
+    100% { 
+        visibility: hidden;
+    }
+
+}
