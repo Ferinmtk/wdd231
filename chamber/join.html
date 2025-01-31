@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Papi Chamber of Commerce">
+        <meta name="description" content="Official directory of Papi's Chamber of Commerce.">
+        <meta name="author" content="Ferrin Mutuku">
+        <meta property="og:title" content="Papi Chamber of Commerce">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:url" content="https://ferinmtk.github.io/wdd231/chamber/directory.html">
+        <title>Join the Chamber</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/main.js" defer></script>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Papi Chamber of Commerce</h1>
+            <nav>
+                <ul>
+                    <li><a href="/chamber/index.html">Home</a></li>
+                    <li><a href="/chamber/directory.html">Directory</a></li>
+                    <li><a href="/chamber/join.html" class="active">Join</a></li>
+                    <li><a href="https://github.com">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ferrin-mutuku-21305911a/">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="all-container">
+                <div class="form-container">
+                    <!-- Join the Chamber Form -->
+                    <h1>Join the Chamber</h1>
+                    <form id="join-form" action="thankyou.html" method="get">
+                        <!-- Applicant's First Name -->
+                        <label for="first-name">First Name: 
+                            <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Enter your first name">
+                        </label>
+        
+                        <!-- Applicant's Last Name -->
+                        <label for="last-name">Last Name:
+                            <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Enter your last name">
+                        </label>
+        
+                        <!-- Organizational Title -->
+                        <label for="title">Organizational Title:
+                            <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Enter your organizational title (minimum 7 characters)">
+                        </label>
+        
+                        <!-- Email Address -->
+                        <label for="email">Email:
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Enter your email address">
+                        </label>
+        
+                        <!-- Mobile Phone Number -->
+                        <label for="phone">Mobile Phone:
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+                        </label>
+        
+                        <!-- Business/Organization Name -->
+                        <label for="business-name">Business/Organization Name:
+                            <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Enter your business or organization name">
+                        </label>
+        
+                        <!-- Membership Level Selection -->
+                        <label for="membership-level">Membership Level:
+                            <select id="membership-level" name="membership-level" required>
+                                <option value="" disabled selected>Choose a Membership Level</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+        
+                        <!-- Business/Organization Description -->
+                        <label for="description">Business/Organization Description:
+                            <textarea id="description" name="description" title="Describe your business or organization"></textarea>
+                        </label>
+        
+                        <!-- Hidden Timestamp -->
+                        <input type="hidden" id="timestamp" name="timestamp">
+        
+                        <!-- Submit Button -->
+                        <input type="submit" value="Submit Application">
+                    </form>
+                </div>
+        
+                <!-- Membership Level Cards -->
+                <div class="membership-levels">
+                    <div class="membership-card">
+                        <h2>NP Membership</h2>
+                        <p>For non-profit organizations. No fee.</p>
+                        <a href="#np-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h2>Bronze Membership</h2>
+                        <p>Basic benefits for small businesses.</p>
+                        <a href="#bronze-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h2>Silver Membership</h2>
+                        <p>Enhanced benefits for growing businesses.</p>
+                        <a href="#silver-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h2>Gold Membership</h2>
+                        <p>Premium benefits for established businesses.</p>
+                        <a href="#gold-modal">Learn More</a>
+                    </div>
+                </div>
+        
+                <!-- Modals for Membership Levels -->
+                <div id="np-modal" class="modal">
+                    <h2>NP Membership Benefits</h2>
+                    <ul>
+                        <li>Access to networking events</li>
+                        <li>Free training sessions</li>
+                    </ul>
+                    <a href="#" class="close-modal">Close</a>
+                </div>
+                <div id="bronze-modal" class="modal">
+                    <h2>Bronze Membership Benefits</h2>
+                    <ul>
+                        <li>All NP benefits</li>
+                        <li>Discounted event tickets</li>
+                    </ul>
+                    <a href="#" class="close-modal">Close</a>
+                </div>
+                <div id="silver-modal" class="modal">
+                    <h2>Silver Membership Benefits</h2>
+                    <ul>
+                        <li>All Bronze benefits</li>
+                        <li>Advertising opportunities</li>
+                    </ul>
+                    <a href="#" class="close-modal">Close</a>
+                </div>
+                <div id="gold-modal" class="modal">
+                    <h2>Gold Membership Benefits</h2>
+                    <ul>
+                        <li>All Silver benefits</li>
+                        <li>Spotlight positions on the homepage</li>
+                    </ul>
+                    <a href="#" class="close-modal">Close</a>
+                </div>
+        
+                <!-- Modal Overlay -->
+                <div class="modal-overlay"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© <span id="year"></span> Papi Chamber of Commerce | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </footer>
+    </body>
+</html>
