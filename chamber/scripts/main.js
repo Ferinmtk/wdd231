@@ -170,3 +170,42 @@ members.forEach(member => {
     container.appendChild(card);
 });
 }
+
+
+
+
+
+//JOIN.HTML CODE
+
+
+// Retrieve URL parameters and display them
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("join-form");
+    
+    if (form) {
+        form.addEventListener("submit", () => {
+            // Set the timestamp field to the current date/time
+            document.getElementById("timestamp").value = new Date().toISOString();
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    document.getElementById('display-first-name').textContent = urlParams.get('first-name') || "Not provided";
+    document.getElementById('display-last-name').textContent = urlParams.get('last-name') || "Not provided";
+    document.getElementById('display-email').textContent = urlParams.get('email') || "Not provided";
+    document.getElementById('display-phone').textContent = urlParams.get('phone') || "Not provided";
+    document.getElementById('display-business-name').textContent = urlParams.get('business-name') || "Not provided";
+
+    // Retrieve and format the timestamp
+    const timestamp = urlParams.get('timestamp');
+    if (timestamp) {
+        const date = new Date(timestamp);
+        document.getElementById('display-timestamp').textContent = isNaN(date.getTime()) ? "Invalid date" : date.toLocaleString();
+    } else {
+        document.getElementById('display-timestamp').textContent = "No timestamp provided";
+    }
+});
