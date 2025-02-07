@@ -154,7 +154,7 @@ main {
 
 .cta-button {
     display: inline-block;
-    background: #ff5722;
+    background: #352a27;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -261,7 +261,7 @@ main {
 }
 
 .spotlight-card a {
-    color: #007bff;
+    color: #02448a;
     text-decoration: none;
     font-weight: bold;
 }
