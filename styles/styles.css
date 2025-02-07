@@ -137,29 +137,60 @@ a {
   padding: 10px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hamburger {
+/* Header styles */
+header {
     display: flex;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: #1e4976;
-    position: absolute;
-    top: 60px;
-    right: 0;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
     padding: 15px;
-    border-radius: 0 0 8px 8px;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .course-btn {
-    flex: 1 1 100%;
-  }
+    background-color: #1e4976;
+    color: white;
 }
+
+/* Center navigation below the h1 */
+nav {
+    margin-top: 10px; /* Add space between h1 and nav */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Ensure links are visible and centered */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsive Design: Hide nav on small screens & show hamburger */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Reset to row for mobile */
+        justify-content: space-between; /* Space out h1 and hamburger */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: #1e4976;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
