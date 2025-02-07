@@ -8,7 +8,7 @@
         <meta name="author" content="Ferrin Mutuku">
         <meta property="og:title" content="Papi Chamber of Commerce">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="chamber/favicon.ico">
+        <meta property="og:image" content="/chamber/images/chamber/jpg">
         <meta property="og:url" content="https://ferinmtk.github.io/wdd231/chamber/directory.html">
         <title>Papi Chamber of Commerce Directory</title>
         <link rel="icon" href="chamber/favicon.ico">
@@ -23,13 +23,18 @@
     <body>
         <header>
             <h1>Papi Chamber of Commerce</h1>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" class="nav">
                 <ul>
-                    <li><a href="/chamber/index.html">Home</a></li>
-                    <li><a href="/chamber/directory.html">Directory</a></li>
-                    <li><a href="/chamber/join.html" class="active">Join</a></li>
-                    <li><a href="https://github.com">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/ferrin-mutuku-21305911a/">LinkedIn</a></li>
+                    <li><a href="/chamber/index.html" class="nav-link">Home</a></li>
+                    <li><a href="/chamber/directory.html" class="nav-link">Directory</a></li>
+                    <li><a href="/chamber/join.html" class="active nav-link">Join</a></li>
+                    <li><a href="https://github.com" class="nav-link">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ferrin-mutuku-21305911a/" class="nav-link">LinkedIn</a></li>
                 </ul>
             </nav>
         </header>
