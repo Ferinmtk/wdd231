@@ -634,4 +634,84 @@ nav ul li a {
     }
 }
 
+/*This is for dicover page*/
+.grid-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+button {
+    background: #023f02;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Grid for Small Screens */
+@media (max-width: 640px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Grid for Medium Screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+            "header header"
+            "content sidebar"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Grid for Large Screens */
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "footer footer footer";
+    }
+
+    .cards {
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+
+    figure img:hover {
+        transform: scale(2.1);
+        transition: transform 0.3s ease-in-out;
+    }
+}
 
