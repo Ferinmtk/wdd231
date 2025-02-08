@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="title" content="Discover Papi Chamber of Commerce">
+        <meta name="description" content="Explore places of interest, businesses, and community highlights in Papi Chamber of Commerce.">
+        <meta name="author" content="Ferrin Mutuku">
+        <meta name="keywords" content="Papi Chamber, Discover Papi, Local Attractions, Business Directory, Community, Events">
+        
+        <!-- Open Graph Meta Tags (for Social Media Sharing) -->
+        <meta property="og:title" content="Discover Papi Chamber of Commerce">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:url" content="https://ferinmtk.github.io/wdd231/chamber/discover.html">
+        <meta property="og:description" content="Find exciting attractions, local businesses, and upcoming events in the Papi Chamber of Commerce.">
+        
+        <!-- Title & Favicon -->
+        <title>Discover Papi Chamber of Commerce</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style.css">
+    
+        <!-- JavaScript -->
+        <script src="scripts/main.js" defer></script>
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+
+    <header>
+        <h1>Papi Chamber of Commerce</h1>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu" class="nav">
+            <ul>
+                <li><a href="/chamber/index.html" class="nav-link">Home</a></li>
+                <li><a href="/chamber/directory.html" class="nav-link">Directory</a></li>
+                <li><a href="/chamber/join.html" class="nav-link">Join</a></li>
+                <li> <a href="/chamber/discover.html" class="active nav-link">Discover</a></li>
+                <li><a href="https://github.com" class="nav-link">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/ferrin-mutuku-21305911a/" class="nav-link">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <aside class="sidebar">
+            <h2>Welcome to Kenya!</h2>
+            <p id="visit-message">Loading...</p>
+        </aside>
+        
+        <section class="content">
+            <h2>Explore Our Area</h2>
+            <div class="cards">
+                <div class="card">
+                    <h2>Nairobi City</h2>
+                    <figure>
+                        <img src="images/nairobi.webp" 
+                             srcset="images/nairob.webp 300w, images/nairobi.webp 600w, images/nairobi.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Nairobi City" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Nairobi City, Kenya</address>
+                    <p>The Capital city of Kenya.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Kisumu City</h2>
+                    <figure>
+                        <img src="images/kisumu.webp" 
+                             srcset="images/kisumu.webp 300w, images/kisumuwebp 600w, images/kisumu.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Kisumu City" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Kisumu, Kenya</address>
+                    <p>On the shores of Lake Victoria, known for its bustling markets, cultural heritage, and beautiful sunsets over the lake.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Kakamega City</h2>
+                    <figure>
+                        <img src="images/kakamega.webp" 
+                             srcset="images/kakamega.webp 300w, images/kakamega.webp 600w, images/kakamega.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Kakamega City" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Kakamega, Kenya</address>
+                    <p>Known for its rich biodiversity, including rare species of birds, butterflies, and monkeys.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Giraffe Centre</h2>
+                    <figure>
+                        <img src="images/girrafe-center-nairobi-1.webp" 
+                             srcset="images/girrafe-center-nairobi-1.webp 300w, images/girrafe-center-nairobi-1.webp 600w, images/girrafe-center-nairobi-1.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Giraffe Centre" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Giraffe Centre Nairobi, Kenya</address>
+                    <p>A sanctuary for the endangered Rothschild giraffe. Visitors can learn about giraffe conservation and even feed the giraffes.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Mombasa City</h2>
+                    <figure>
+                        <img src="images/mombasa-city.webp" 
+                             srcset="images/mombasa-city.webp 300w, images/mombasa-city.webp 600w, images/mombasa-city.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Mombasa City" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Mombasa City, Kenya</address>
+                    <p>A rich blend of cultures, stunning beaches, and notable landmarks like Fort Jesus.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Eldoret City</h2>
+                    <figure>
+                        <img src="images/Skyline_of_Eldoret_city.webp" 
+                             srcset="images/Skyline_of_Eldoret_city.webp 300w, images/Skyline_of_Eldoret_city.webp 600w, images/Skyline_of_Eldoret_city.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Eldoret City" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Eldoret City, Kenya</address>
+                    <p>Known for its high-altitude training centers for athletes and scenic landscapes.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Chale Island</h2>
+                    <figure>
+                        <img src="images/kenya-beaches-chale-island.webp" 
+                             srcset="images/kenya-beaches-chale-island-300.webp 300w, images/kenya-beaches-chale-island-600.webp 600w, images/kenya-beaches-chale-island-900.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Chale Island" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Mombasa City, Kenya</address>
+                    <p>Known for its pristine beaches, clear waters, and luxurious resorts.</p>
+                    <button>Learn More</button>
+                </div>
+        
+                <div class="card">
+                    <h2>Nairobi National Park</h2>
+                    <figure>
+                        <img src="images/karura-natural-river.webp" 
+                             srcset="images/karura-natural-river-300.webp 300w, images/karura-natural-river-600.webp 600w, images/karura-natural-river-900.webp 900w"
+                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                             alt="Nairobi National Park" loading="lazy" width="600" height="400">
+                    </figure>
+                    <address>Nairobi, Kenya</address>
+                    <p>A serene urban forest in Nairobi, offering walking and biking trails, a waterfall, and picnic spots.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Papi Chamber of Commerce | WDD 231</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+</html>
