@@ -227,3 +227,22 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('display-timestamp').textContent = "No timestamp provided";
     }
 });
+
+//for discover page
+document.addEventListener("DOMContentLoaded", function() {
+    const visitMessage = document.getElementById("visit-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+
+    if (!lastVisit) {
+        visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
+        visitMessage.textContent = daysSinceLastVisit < 1 
+            ? "Back so soon! Awesome!" 
+            : `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? "day" : "days"} ago.`;
+    }
+
+    localStorage.setItem("lastVisit", now);
+});
