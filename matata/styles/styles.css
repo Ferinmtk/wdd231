@@ -1,11 +1,23 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
 
+/* CSS Variables for Global Styles */
+:root {
+    --primary-bg: #1E1E2E;
+    --secondary-bg: #29293D;
+    --primary-color: #E0E0E0;
+    --highlight-color: #FF007F;
+    --link-color: #00AFFF;
+    --button-bg: #7D2AE8;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #1E1E2E; /* Dark background */
-    color: #E0E0E0; /* Light gray text */
+    font-family: var(--font-primary);
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -13,7 +25,7 @@ body {
 
 /* Header */
 header {
-    background-color: #29293D; /* Dark Gray */
+    background-color: var(--secondary-bg);
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
@@ -29,7 +41,7 @@ main {
 
 /* Sections */
 section {
-    background: #29293D; /* Dark Gray */
+    background: var(--secondary-bg);
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
@@ -38,25 +50,30 @@ section {
 
 /* Headings */
 h1, h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #FFFFFF; /* Pure white for contrast */
+    font-family: var(--font-secondary);
+    color: #FFFFFF;
 }
 
 /* Links */
 a {
-    color: #00AFFF; /* Neon Blue */
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: #FF007F; /* Hot Pink */
+    color: var(--highlight-color);
     text-decoration: underline;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid var(--highlight-color); /* Hot Pink focus outline */
 }
 
 /* Buttons */
 button {
-    background: #7D2AE8; /* Electric Purple */
+    background: var(--button-bg);
     color: #FFFFFF;
     padding: 12px 20px;
     border: none;
@@ -67,13 +84,13 @@ button {
 }
 
 button:hover {
-    background: #FF007F; /* Hot Pink */
+    background: var(--highlight-color);
 }
 
 /* Footer */
 footer {
-    background-color: #29293D;
-    color: #E0E0E0;
+    background-color: var(--secondary-bg);
+    color: var(--primary-color);
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
