@@ -228,21 +228,72 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//for discover page
-document.addEventListener("DOMContentLoaded", function() {
-    const visitMessage = document.getElementById("visit-message");
-    const lastVisit = localStorage.getItem("lastVisit");
-    const now = Date.now();
+// For discover page
+document.addEventListener('DOMContentLoaded', () => {
+    const visitMessageElement = document.getElementById('visit-message');
 
-    if (!lastVisit) {
-        visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    // Get the current date and time in milliseconds
+    const currentVisitTime = Date.now();
+
+    // Get the last visit time from localStorage
+    const lastVisitTime = localStorage.getItem('lastVisitTime');
+
+    if (lastVisitTime) {
+        // Calculate the time difference in milliseconds
+        const timeDifference = currentVisitTime - lastVisitTime;
+        // Convert time difference to days
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (timeDifference < 24 * 60 * 60 * 1000) { // Less than a day
+            visitMessageElement.innerText = "Back so soon! Awesome!";
+        } else {
+            visitMessageElement.innerText = `You last visited ${daysDifference} day${daysDifference === 1 ? '' : 's'} ago.`;
+        }
     } else {
-        const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-
-        visitMessage.textContent = daysSinceLastVisit < 1 
-            ? "Back so soon! Awesome!" 
-            : `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? "day" : "days"} ago.`;
+        // First visit
+        visitMessageElement.innerText = "Welcome to Papi Chamber .";
     }
 
-    localStorage.setItem("lastVisit", now);
+    // Update the last visit time in localStorage
+    localStorage.setItem('lastVisitTime', currentVisitTime);
+
+    // Fetch and render the chamber data
+    fetch('data/chamber.json')
+        .then(response => response.json())
+        .then(data => {
+            // Populate sidebar
+            document.getElementById('sidebar-title').innerText = data.sidebar.title;
+            // No need to change visitMessageElement as it is already set
+
+            // Populate content title
+            document.getElementById('content-title').innerText = data.content.title;
+
+            // Populate cards
+            const cardsContainer = document.getElementById('cards-container');
+            data.content.cards.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+
+                cardElement.innerHTML = `
+                    <h2>${card.title}</h2>
+                    <figure>
+                        <img src="${card.image.src}"
+                             srcset="${card.image.srcset}"
+                             sizes="${card.image.sizes}"
+                             alt="${card.image.alt}"
+                             width="${card.image.width}"
+                             height="${card.image.height}"
+                             loading="${card.image.loading}">
+                    </figure>
+                    <address>${card.address}</address>
+                    <p>${card.description}</p>
+                    <button>${card.buttonText}</button>
+                `;
+
+                cardsContainer.appendChild(cardElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading data:', error);
+        });
 });
