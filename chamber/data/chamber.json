@@ -1,0 +1,131 @@
+{
+    "sidebar": {
+        "title": "Welcome to Kenya!",
+        "message": "Loading..."
+    },
+    "content": {
+        "title": "Explore Our Area",
+        "cards": [
+            {
+                "title": "Nairobi City",
+                "image": {
+                    "src": "images/nairobi.webp",
+                    "srcset": "images/nairobi.webp 300w, images/nairobi.webp 600w, images/nairobi.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Nairobi City",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Nairobi City, Kenya",
+                "description": "The Capital city of Kenya.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Kisumu City",
+                "image": {
+                    "src": "images/kisumu.webp",
+                    "srcset": "images/kisumu.webp 300w, images/kisumu.webp 600w, images/kisumu.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Kisumu City",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Kisumu, Kenya",
+                "description": "On the shores of Lake Victoria, known for its bustling markets, cultural heritage, and beautiful sunsets over the lake.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Kakamega City",
+                "image": {
+                    "src": "images/kakamega.webp",
+                    "srcset": "images/kakamega.webp 300w, images/kakamega.webp 600w, images/kakamega.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Kakamega City",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Kakamega, Kenya",
+                "description": "Known for its rich biodiversity, including rare species of birds, butterflies, and monkeys.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Giraffe Centre",
+                "image": {
+                    "src": "images/girrafe-center-nairobi-1.webp",
+                    "srcset": "images/girrafe-center-nairobi-1.webp 300w, images/girrafe-center-nairobi-1.webp 600w, images/girrafe-center-nairobi-1.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Giraffe Centre",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Giraffe Centre Nairobi, Kenya",
+                "description": "A sanctuary for the endangered Rothschild giraffe. Visitors can learn about giraffe conservation and even feed the giraffes.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Mombasa City",
+                "image": {
+                    "src": "images/mombasa-city.webp",
+                    "srcset": "images/mombasa-city.webp 300w, images/mombasa-city.webp 600w, images/mombasa-city.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Mombasa City",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Mombasa City, Kenya",
+                "description": "A rich blend of cultures, stunning beaches, and notable landmarks like Fort Jesus.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Eldoret City",
+                "image": {
+                    "src": "images/Skyline_of_Eldoret_city.webp",
+                    "srcset": "images/Skyline_of_Eldoret_city.webp 300w, images/Skyline_of_Eldoret_city.webp 600w, images/Skyline_of_Eldoret_city.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Eldoret City",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Eldoret City, Kenya",
+                "description": "Known for its high-altitude training centers for athletes and scenic landscapes.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Chale Island",
+                "image": {
+                    "src": "images/kenya-beaches-chale-island.webp",
+                    "srcset": "images/kenya-beaches-chale-island.webp 300w, images/kenya-beaches-chale-island.webp 600w, images/kenya-beaches-chale-island.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Chale Island",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Mombasa City, Kenya",
+                "description": "Known for its pristine beaches, clear waters, and luxurious resorts.",
+                "buttonText": "Learn More"
+            },
+            {
+                "title": "Nairobi National Park",
+                "image": {
+                    "src": "images/karura-natural-river.webp",
+                    "srcset": "images/karura-natural-river.webp 300w, images/karura-natural-river.webp 600w, images/karura-natural-river.webp 900w",
+                    "sizes": "(max-width: 600px) 300px, (max-width: 900px) 600px, 900px",
+                    "alt": "Nairobi National Park",
+                    "width": 600,
+                    "height": 400,
+                    "loading": "lazy"
+                },
+                "address": "Nairobi, Kenya",
+                "description": "A serene urban forest in Nairobi, offering walking and biking trails, a waterfall, and picnic spots.",
+                "buttonText": "Learn More"
+            }
+        ]
+    }
+}
