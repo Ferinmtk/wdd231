@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -557,6 +557,7 @@ form textarea:required:valid {
 }
 
 
+
 /* Header styles */
 header {
     display: flex;
@@ -634,6 +635,7 @@ nav ul li a {
     }
 }
 
+
 /*This is for dicover page*/
 .grid-container {
     display: grid;
@@ -688,11 +690,10 @@ button {
             "header header"
             "content sidebar"
             "footer footer";
-        grid-template-columns: 2fr 1fr;
     }
 
     .cards {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Default to two columns for medium screens */
     }
 }
 
@@ -706,7 +707,8 @@ button {
     }
 
     .cards {
-        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: repeat(3, 1fr); /* Add 3 rows */
+        grid-template-columns: repeat(3, 1fr); /* Add 3 columns */
     }
 
     figure img:hover {
